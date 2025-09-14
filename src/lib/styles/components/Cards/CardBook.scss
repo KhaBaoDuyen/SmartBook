@@ -1,191 +1,25 @@
-  .cardBook {
-      border-radius: 12px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: all 0.4s ease;
-      position: relative;
-      width: 200px;
-      height: 280px;
-      background: #333;
-  }
-
-  .cardBook:hover {
-      width: 600px;
-      height: 300px;
-      padding: 1rem;
-      background: rgba(45, 45, 45, 0.95);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  }
-
-  .card-content {
-      display: flex;
-      gap: 1.5rem;
-      height: 100%;
-  }
-
-  .book-cover {
-      flex-shrink: 0;
-      width: 200px;
-      height: 280px;
-      border-radius: 8px;
-      overflow: hidden;
-      position: relative;
-  }
-
-  .cardBook:hover .book-cover {
-      width: 200px;
-      height: 260px;
-  }
-
-  .book-cover img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: all 0.4s ease;
-  }
-
-  .cardBook-text {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateX(20px);
-      transition: all 0.4s ease 0.1s;
-      color: white;
-  }
-
-  .cardBook:hover .cardBook-text {
-      opacity: 1;
-      visibility: visible;
-      transform: translateX(0);
-  }
-
-  .book-title {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: white;
-      margin-bottom: 0.5rem;
-      line-height: 1.3;
-  }
-
-  .book-author {
-      font-size: 1rem;
-      color: #999;
-      margin-bottom: 1rem;
-  }
-
-  .book-status {
-      display: inline-block;
-      background: rgba(16, 185, 129, 0.1);
-      color: #10b981;
-      padding: 0.25rem 0.75rem;
-      border-radius: 20px;
-      font-size: 0.875rem;
-      font-weight: 500;
-      margin-bottom: 1rem;
-      width: fit-content;
-  }
+ 
 
   .book-location {
       font-size: 0.875rem;
       color: #ccc;
       margin-bottom: 0.5rem;
   }
+ 
+ // cardRaking
+ .label-rank {
+  z-index: 10;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  background: linear-gradient(180deg,#fff 16.82%,hsla(0,0%,100%,.06) 96.58%);
+    background-clip: border-box;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: .6px #fff;
+}
 
-  .book-description {
-      font-size: 0.875rem;
-      color: #bbb;
-      line-height: 1.5;
-      margin: 1rem 0;
-      overflow: hidden;
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-  }
-
-  .book-actions {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: auto;
-  }
-
-  .read-button {
-      background: #10b981;
-      color: white;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      font-size: 0.875rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-  }
-
-  .read-button:hover {
-      background: #059669;
-      transform: translateY(-1px);
-  }
-
-  .favorite-btn {
-      background: rgba(255, 255, 255, 0.1);
-      border: none;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-  }
-
-  .favorite-btn:hover {
-      background: rgba(239, 68, 68, 0.2);
-      color: #ef4444;
-  }
-
-  .details-link {
-      color: #10b981;
-      text-decoration: none;
-      font-size: 0.875rem;
-      font-weight: 500;
-      margin-top: 1rem;
-      display: block;
-      transition: all 0.3s ease;
-  }
-
-  .details-link:hover {
-      text-decoration: underline;
-      color: #059669;
-  }
-
-   @media (max-width: 768px) {
-      .cardBook:hover {
-          width: 100%;
-          max-width: 500px;
-          height: auto;
-          min-height: 200px;
-          padding: 1rem;
-      }
-
-      .card-content {
-          gap: 1rem;
-      }
-
-      .cardBook:hover .book-cover {
-          width: 120px;
-          height: 180px;
-      }
-
-      .book-description {
-          -webkit-line-clamp: 2;
-      }
-  }
+.bg-rank-1 {
+  background: linear-gradient(180deg,rgba(255,55,95,0),rgba(255,55,95,.66));
+}

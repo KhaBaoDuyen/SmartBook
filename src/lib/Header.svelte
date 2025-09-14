@@ -65,7 +65,7 @@
         <div class="flex items-start justify-between">
             <button
                 on:click={toggleMobileMenu}
-                class="lg:hidden p-2 rounded-lg    hover:bg-pri transition-colors order-1"
+                class="lg:hidden p-2 rounded-lg hover:bg-pri transition-colors order-1"
             >
                 <svg
                     class="w-6 h-6"
@@ -254,11 +254,13 @@
             </div>
         </div>
     </div>
+    <div class="lg:hidden clock">
    <div
   class="overflow-x-auto scrollbar-hide transition-transform duration-300"
-  style="transform: translateY({scrolled ? '-100%' : '0'}); display: {scrolled ? 'none' : 'block'}"
+            style="transform: translateY({scrolled
+                ? '-100%'
+                : '0'}); display: {scrolled ? 'none' : 'block'}"
 >
-
         <nav class="flex w-[80vw] gap-3">
             {#each mainCategories as cat}
                 <div class="flex-shrink-0">
@@ -273,12 +275,15 @@
             {/each}
         </nav>
     </div>
+    </div>
 </header>
 
 <div
   class="lg:hidden z-[100] bg-[#121214] fixed top-0 left-0 w-[70%] h-screen
      border-r overflow-y-auto scrollbar-hide transition-all duration-300
-     {mobileMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}"
+     {mobileMenuOpen
+        ? 'translate-x-0 opacity-100'
+        : '-translate-x-full opacity-0'}"
 >
     <div class="px-4 py-4 mt-16">
         <div class="border-b flex flex-col gap-4 border-white/30 pb-4 mb-4">
